@@ -1,0 +1,8 @@
+{
+  "name": "MindUp: Trộn đề Toán 12",
+  "description": "Phần mềm Trộn đề thi trắc nghiệm môn Toán lớp 12 tốt nghiệp THPT 2027 phát triển bởi Trịnh Như Quỳnh",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
