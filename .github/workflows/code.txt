@@ -1,0 +1,64 @@
+{/* HEADER VỚI LOGO TRƯỜNG */}
+<header className="sticky top-0 z-40 bg-red-950 text-white shadow-lg border-b border-yellow-600/40">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <div className="flex items-center space-x-3">
+      {/* Vị trí đặt file logo (lưu ảnh vào thư mục public/logo.png) */}
+      <div className="w-12 h-12 rounded-full border-2 border-yellow-400 overflow-hidden bg-white flex items-center justify-center p-1">
+        <img 
+          src="/logo.png" 
+          alt="Logo Trường Sĩ quan Pháo binh" 
+          className="w-full h-full object-contain"
+          onError={(e) => {
+            // Fallback nếu chưa tải file ảnh
+            (e.target as HTMLElement).style.display = 'none';
+          }}
+        />
+      </div>
+      <div>
+        <span className="font-extrabold text-base sm:text-xl uppercase tracking-wider text-yellow-400 block">
+          BỘ QUỐC PHÒNG - BINH CHỦNG PHÁO BINH
+        </span>
+        <span className="text-xs sm:text-sm font-bold uppercase tracking-wide text-white block">
+          TRƯỜNG SĨ QUAN PHÁO BINH ANH HÙNG
+        </span>
+      </div>
+    </div>
+
+    {/* Nút bật Mã QR truy cập di động */}
+    <div className="flex items-center gap-3">
+      <button
+        onClick={() => setShowQR(true)}
+        className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-red-950 font-bold px-3.5 py-2 rounded-lg shadow-md transition text-sm"
+      >
+        <QrCode className="w-4 h-4" />
+        <span className="hidden sm:inline">Quét mã QR</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{/* BANNER KỶ NIỆM VÀ TRUYỀN THỐNG VẺ VANG */}
+<section className="relative bg-gradient-to-r from-red-950 via-red-900 to-amber-950 text-white py-14 px-4 sm:px-6 lg:px-8 shadow-inner overflow-hidden border-b-4 border-yellow-500">
+  {/* Họa tiết nền quân đội */}
+  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:16px_16px]" />
+  
+  <div className="relative max-w-5xl mx-auto text-center space-y-4">
+    <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest border border-yellow-400/40">
+      <Shield className="w-4 h-4 text-yellow-400" />
+      ĐƠN VỊ ANH HÙNG LỰC LƯỢNG VŨ TRANG NHÂN DÂN
+    </div>
+    
+    <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-yellow-400 drop-shadow-md">
+      KỶ NIỆM TRUYỀN THỐNG VẺ VANG <br className="hidden sm:inline" />
+      TRƯỜNG SĨ QUAN PHÁO BINH ANH HÙNG
+    </h1>
+
+    <p className="text-base sm:text-xl font-semibold text-yellow-200 tracking-wide italic">
+      "Chân đồng vai sắt, đánh giỏi, bắn trúng"
+    </p>
+
+    <p className="text-xs sm:text-sm md:text-base text-slate-200 max-w-3xl mx-auto leading-relaxed pt-2">
+      Tự hào chặng đường xây dựng, chiến đấu và trưởng thành — cái nôi đào tạo sĩ quan chỉ huy, kỹ thuật pháo binh kiên cường, phụng sự sự nghiệp bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa.
+    </p>
+  </div>
+</section>
